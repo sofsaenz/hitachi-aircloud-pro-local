@@ -1,0 +1,90 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Conectar al airCloud Gateway",
+        "description": "Introduce la dirección LAN y el usuario de la página web del gateway (https://<ip>/).",
+        "data": {
+          "host": "Dirección IP o nombre del gateway",
+          "username": "Usuario",
+          "password": "Contraseña"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Volver a autenticar con el gateway",
+        "data": {
+          "username": "Usuario",
+          "password": "Contraseña"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "No se pudo conectar con el gateway. Revisa la IP y que Home Assistant esté en la misma red.",
+      "invalid_auth": "El gateway rechazó el usuario o la contraseña.",
+      "no_devices": "Inicio de sesión correcto, pero la lista de dispositivos está vacía.",
+      "unknown": "Error inesperado, revisa el registro de Home Assistant."
+    },
+    "abort": {
+      "already_configured": "Este gateway ya está configurado.",
+      "reauth_successful": "Reautenticación correcta."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Opciones de sondeo",
+        "data": {
+          "scan_interval": "Intervalo de sondeo (segundos)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "room_temperature": {
+        "name": "Temperatura ambiente"
+      },
+      "outlet_temperature": {
+        "name": "Temperatura de salida de aire"
+      },
+      "coil_liquid_temperature": {
+        "name": "Temperatura de líquido del serpentín"
+      },
+      "coil_gas_temperature": {
+        "name": "Temperatura de gas del serpentín"
+      },
+      "compressor_frequency": {
+        "name": "Frecuencia del compresor"
+      },
+      "alarm_code": {
+        "name": "Código de alarma"
+      },
+      "outdoor_temperature": {
+        "name": "Temperatura exterior"
+      },
+      "discharge_temperature": {
+        "name": "Temperatura de descarga"
+      },
+      "discharge_pressure": {
+        "name": "Presión de descarga"
+      },
+      "suction_pressure": {
+        "name": "Presión de succión"
+      },
+      "fan_power": {
+        "name": "Potencia del ventilador"
+      },
+      "cycle": {
+        "name": "Ciclo"
+      }
+    },
+    "binary_sensor": {
+      "thermo_on": {
+        "name": "Termostato activo"
+      },
+      "alarm": {
+        "name": "Alarma"
+      }
+    }
+  }
+}
