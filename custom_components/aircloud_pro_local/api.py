@@ -196,12 +196,12 @@ def parse_odu_status(text: str) -> OduState:
     )
 
 
-_ROW_RE = re.compile(r"<tr\s+class=\"device([^\"]*)\">(.*?)</tr>", re.S | re.I)
-_NAME_RE = re.compile(r"class=\"name[^\"]*\"[^>]*>\s*<div>\s*([^<]+?)\s*</div>", re.S | re.I)
-_DESC_RE = re.compile(r"class=\"myshow\"[^>]*>\s*([^<]*?)\s*</div>", re.S | re.I)
+_ROW_RE = re.compile(r"<tr\s+class=[\"']device([^\"']*)[\"'][^>]*>(.*?)</tr>", re.S | re.I)
+_NAME_RE = re.compile(r"class=[\"']name[^\"']*[\"'][^>]*>\s*<div[^>]*>\s*([^<]+?)\s*</div>", re.S | re.I)
+_DESC_RE = re.compile(r"class=[\"']myshow[\"'][^>]*>\s*([^<]*?)\s*</div>", re.S | re.I)
 _DEV_RE = re.compile(r"act=(\d+)(?:&amp;|&)dev=(\d+)", re.I)
-_ADDR_RE = re.compile(r"class=\"address\"[^>]*>\s*<span>\s*([^<]*?)\s*</span>", re.S | re.I)
-_MODEL_RE = re.compile(r"class=\"model[^\"]*\"[^>]*>\s*<span>\s*([^<]*?)\s*</span>", re.S | re.I)
+_ADDR_RE = re.compile(r"class=[\"']address[\"'][^>]*>\s*<span[^>]*>\s*([^<]*?)\s*</span>", re.S | re.I)
+_MODEL_RE = re.compile(r"class=[\"']model[^\"']*[\"'][^>]*>\s*<span[^>]*>\s*([^<]*?)\s*</span>", re.S | re.I)
 _SYSTEM_RE = re.compile(r"system-(\d+)", re.I)
 
 
