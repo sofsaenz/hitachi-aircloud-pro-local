@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Conectar al airCloud Gateway",
-        "description": "Introduce la dirección LAN y el usuario de la página web del gateway (https://<ip>/).",
+        "description": "Introduce la dirección LAN y el usuario de la página web del gateway (https://gateway-ip/).",
         "data": {
           "host": "Dirección IP o nombre del gateway",
           "username": "Usuario",

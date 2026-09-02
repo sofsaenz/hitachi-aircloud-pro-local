@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Connect to the airCloud Gateway",
-        "description": "Enter the LAN address and the login used on the gateway's web page (https://<ip>/).",
+        "description": "Enter the LAN address and the login used on the gateway's web page (https://gateway-ip/).",
         "data": {
           "host": "Gateway IP address or hostname",
           "username": "Username",
